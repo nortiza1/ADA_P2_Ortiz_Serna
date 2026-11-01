@@ -13,6 +13,7 @@ clásica Θ(n²) y de Karatsuba Θ(n^log₂3), con validación y medición de ti
 
 ```sh
 make            # Compila todo en build/
+./build/multiplicar   # Pide dos números y muestra su producto
 make test       # Compara Karatsuba contra el método clásico
 make bench      # Mide tiempos, escribe resultados/tiempos.csv y busca el cruce
 python3 scripts/graficar.py   # Genera resultados/grafica_tiempos.png
@@ -22,6 +23,7 @@ python3 scripts/graficar.py   # Genera resultados/grafica_tiempos.png
 
 | Ruta | Contenido |
 |---|---|
+| `main.cpp` | Programa para multiplicar dos números |
 | `include/numero.h` | Representación e interfaz pública |
 | `src/numero.cpp` | `sumar`, `restar`, `desplazar`, `partir` y conversiones |
 | `src/multiplicacion.cpp` | `multiplicacionClasica` y `karatsuba` |

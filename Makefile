@@ -7,13 +7,16 @@ LIB   := $(BUILD)/numero.o $(BUILD)/multiplicacion.o
 
 .PHONY: all test bench clean
 
-all: $(BUILD)/validacion $(BUILD)/benchmark
+all: $(BUILD)/multiplicar $(BUILD)/validacion $(BUILD)/benchmark
 
 $(BUILD):
 	mkdir -p $(BUILD)
 
 $(BUILD)/%.o: src/%.cpp include/numero.h | $(BUILD)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
+
+$(BUILD)/multiplicar: main.cpp $(LIB)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
 
 $(BUILD)/validacion: tests/validacion.cpp $(LIB)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
