@@ -3,7 +3,7 @@
 Análisis y Diseño de Algoritmos. Implementación en C++17 de la multiplicación
 clásica Θ(n²) y de Karatsuba Θ(n^log₂3), con validación y medición de tiempos.
 
-**Integrantes:** [Integrante 1], [Integrante 2], [Integrante 3]
+**Integrantes:** Nicolas Ortiz Alvarez, Samuel Serna
 
 ## Requisitos
 
